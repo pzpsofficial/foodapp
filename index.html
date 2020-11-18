@@ -17,14 +17,16 @@
     <link rel="stylesheet" href="Styles/main.css">
   </head>
   <body>
+    <p id="home"></p>
     <header>
       <div class="brand">
         <h3>YMeal <i class="fas fa-utensils"></i></h3>
       </div>
       <nav>
         <ul>
-          <li>Services</li>
-          <li>Your Fridge</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#ser">Services</a></li>
+          <li><a href="#fri">Your Fridge</a></li>
         </ul>
       </nav>
     </header>
@@ -33,9 +35,108 @@
       <section class="hero">
         <h1>Your Meal</h1>
         <p>Don't have any idea what to eat during quarantine? </br> Let us help you!</p>
-        <i class="fas fa-arrow-circle-down"></i>
+        <a href="#ser"><i class="fas fa-arrow-circle-down"></i></a>
+      </section>
+      <section id="ser" class="services">
+        <div class="header">
+          <h2>Our services!</h2>
+        </div>
+        <div class="box first">
+          <div class="content">
+            <h3>Can you go to the shop?</h3>
+            <p>Look up for a meal with any ingriedients!</p>
+            <button class="btn">Search <i class="fas fa-search"></i></button>
+          </div> 
+          <div class="img">
+            <img src="./images/shop.jpg" alt="Shop Image">
+          </div>
+        </div>
+        <div class="box second">
+          <div class="img">
+            <img src="./images/closed.jpg" alt="Shop Image">
+          </div>
+          <div class="content">
+            <h3>Can't you go to the shop?</h3>
+            <p>Look up for a meal with main ingriedient in Your fridge!</p>
+            <button class="btn">Search <i class="fas fa-search"></i></button>
+          </div> 
+        </div>
+      </section>
+      <section id="fri" class="fridge">
+        <div class="header">
+          <h2>Your fridge!</h2>
+          <p>What is "Your fridge"? <br> It is a place 
+          where you can add Your ingriedients, and then look 
+          up for a meal based on it!</p>
+        </div>
+        <div class="ingriedients">
+          <h2>Fridge</h2>
+          <ul class="items">
+            <li>
+              <div class="item">
+                <p>1. Chicken</p>
+                <div class="btns">
+                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
+                </div>
+              </div>    
+            </li> 
+            <li>
+              <div class="item">
+                <p>2. Fish</p>
+                <div class="btns">
+                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
+                </div>
+              </div>    
+            </li> 
+            <li>
+              <div class="item">
+                <p>3. Eggs</p>
+                <div class="btns">
+                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
+                </div>
+              </div>    
+            </li> 
+            <li>
+              <div class="item">
+                <p>4. Flour</p>
+                <div class="btns">
+                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
+                </div>
+              </div>    
+            </li> 
+            <li>
+              <div class="item">
+                <p>5. Sugar</p>
+                <div class="btns">
+                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
+                </div>
+              </div>    
+            </li> 
+            <li>
+              <div class="item">
+                <p>6. Oil</p>
+                <div class="btns">
+                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
+                </div>
+              </div>    
+            </li> 
+          </ul>
+        </div>
+        <div class="add">
+          <input type="text" placeholder="Add your ingriedient...">
+          <button type="button"><i class="fas fa-plus"></i></button>
+        </div>
+        <i id="st" class="fas fa-egg"></i>
+        <i id="nd" class="fas fa-fish"></i>
+        <i id="rd" class="fas fa-pepper-hot"></i>
       </section>
     </main>
+
+    <footer>
+      <p>Made with lots of love by Bartosz Karpiel</p>
+    </footer>
+
+    <a id="up" href="#home"><i class="fas fa-arrow-circle-up"></i></a>
 
     <script src="app.js"></script>
   </body>

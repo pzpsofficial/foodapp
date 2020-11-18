@@ -22,6 +22,10 @@ $pacifio: "Pacifico", cursive;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 // MIX-INY
 
 @mixin flex($direction, $justify) {
@@ -29,4 +33,19 @@ $pacifio: "Pacifico", cursive;
   align-items: center;
   justify-content: $justify;
   flex-direction: $direction;
+}
+
+@mixin background($url, $strengh) {
+  background-image: linear-gradient(
+      rgba(54, 54, 54, $strengh),
+      rgba(54, 54, 54, $strengh)
+    ),
+    url($url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin transition($time) {
+  transition: all $time ease-in-out;
 }

@@ -7,7 +7,454 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
+body {
+  position: absolute;
+  scroll-behavior: smooth;
+  background-color: #eceae1;
+}
+
 body header {
-  height: 8vh;
+  padding: 0 5%;
+  background-color: rgba(84, 84, 84, 0.5);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #eceae1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body header .brand h3 {
+  font-size: 2rem;
+  font-family: "Pacifico", cursive;
+}
+
+body header .brand h3 i {
+  margin-left: 0.3rem;
+  color: #ce282a;
+}
+
+body header nav {
+  font-size: 1.2rem;
+  font-weight: 50;
+  font-family: "Roboto", sans-serif;
+}
+
+body header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body header nav ul li {
+  margin-left: 3rem;
+}
+
+body header nav ul li a:hover {
+  cursor: pointer;
+  color: #ce282a;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body header nav ul li a {
+  color: #eceae1;
+  text-decoration: none;
+}
+
+body main .hero {
+  position: relative;
+  text-align: center;
+  color: #eceae1;
+  min-height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 54, 54, 0.7)), to(rgba(54, 54, 54, 0.7))), url("../images/background.jpg");
+  background-image: linear-gradient(rgba(54, 54, 54, 0.7), rgba(54, 54, 54, 0.7)), url("../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .hero h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 5rem;
+  color: #ce282a;
+}
+
+body main .hero p {
+  font-size: 2.2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+body main .hero a {
+  text-decoration: none;
+  color: #eceae1;
+}
+
+body main .hero i {
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body main .services {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0;
+  -ms-grid-columns: 5% 1fr 1fr 5%;
+      grid-template-columns: 5% 1fr 1fr 5%;
+  -ms-grid-rows: 0.2fr 1fr 1fr;
+      grid-template-rows: 0.2fr 1fr 1fr;
+      grid-template-areas: "header header header header" ". first first ." ". second second .";
+}
+
+body main .services .header {
+  margin-bottom: 3rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+  background-color: #545454;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  color: #eceae1;
+  padding: 1rem 0;
+}
+
+body main .services .first {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: first;
+}
+
+body main .services .second {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: second;
+}
+
+body main .services .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .services .box .img {
+  width: 50%;
+  padding: 10px;
+}
+
+body main .services .box .img img {
+  width: 100%;
+  height: 100%;
+}
+
+body main .services .box .content {
+  text-align: center;
+  color: #eceae1;
+  font-family: "Roboto", sans-serif;
+  width: 40%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .services .box .content .btn {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #eceae1;
+  font-size: 1.3rem;
+  padding: 0.5rem 2rem;
+  outline: none;
+  border: none;
+  background-color: #545454;
+  margin-top: 1rem;
+}
+
+body main .services .box .content .btn:hover {
+  cursor: pointer;
+  color: #ce282a;
+}
+
+body main .services .box .content .btn i {
+  color: #ce282a;
+}
+
+body main .services .box .content h3 {
+  color: #ce282a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+body main .services .box .content p {
+  color: #545454;
+  font-size: 1.3rem;
+}
+
+body .fridge {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr 1.5fr 5%;
+      grid-template-columns: 5% 1fr 1.5fr 5%;
+  -ms-grid-rows: 1fr 2fr;
+      grid-template-rows: 1fr 2fr;
+      grid-template-areas: "header header header header" ". ingredients add .";
+}
+
+body .fridge .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+  margin-top: 3rem;
+  text-align: center;
+  background-color: #545454;
+  padding: 2rem;
+  color: #eceae1;
+}
+
+body .fridge .header h2 {
+  font-size: 2.5rem;
+  font-family: "Pacifico", cursive;
+}
+
+body .fridge .header p {
+  margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+body .fridge .ingriedients {
+  position: relative;
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: ingredients;
+  width: 70%;
+  min-height: 400px;
+  margin: auto;
+  color: #eceae1;
+  font-family: "Roboto", sans-serif;
+  background-color: #545454;
+  padding: 1rem 0.3rem;
+}
+
+body .fridge .ingriedients ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+body .fridge .ingriedients ul li {
+  width: 90%;
+  padding: 0.3rem 0.5rem;
+  margin: 0 auto 0.5rem auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body .fridge .ingriedients ul li .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .fridge .ingriedients ul li button {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  outline: none;
+  color: #eceae1;
+  background-color: transparent;
+  font-size: 1.2rem;
+  margin-left: 0.4rem;
+}
+
+body .fridge .ingriedients ul li button:hover {
+  cursor: pointer;
+  color: #ce282a;
+}
+
+body .fridge .ingriedients h2 {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ce282a;
+  padding: 1rem 0.5rem;
+}
+
+body .fridge .add {
+  width: 80%;
+  margin: auto;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: add;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .fridge .add input {
+  font-size: 1.3rem;
+  width: 70%;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #545454;
+  color: #eceae1;
+  padding: 0.5rem 0.5rem;
+}
+
+body .fridge .add button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #ce282a;
+  color: #eceae1;
+}
+
+body .fridge .add button:hover {
+  cursor: pointer;
+}
+
+body .fridge #st {
+  z-index: -1;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  font-size: 9rem;
+  color: rgba(206, 40, 42, 0.6);
+}
+
+body .fridge #nd {
+  z-index: -1;
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  font-size: 9rem;
+  color: rgba(206, 40, 42, 0.7);
+}
+
+body .fridge #rd {
+  z-index: -1;
+  position: absolute;
+  top: 60%;
+  right: 20%;
+  font-size: 9rem;
+  color: rgba(206, 40, 42, 0.7);
+}
+
+body footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #eceae1;
+  background-color: #545454;
+}
+
+body #up {
+  font-size: 1.5rem;
+  color: #ce282a;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
