@@ -8,7 +8,6 @@
       src="https://kit.fontawesome.com/a7b1bf2ed9.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
@@ -58,7 +57,7 @@
           <div class="content">
             <h3>Can't you go to the shop?</h3>
             <p>Look up for a meal with main ingriedient in Your fridge!</p>
-            <button class="btn">Search <i class="fas fa-search"></i></button>
+            <button id="fridgeMealSearch" class="btn">Search <i class="fas fa-search"></i></button>
           </div> 
         </div>
       </section>
@@ -71,60 +70,12 @@
         </div>
         <div class="ingriedients">
           <h2>Fridge</h2>
-          <ul class="items">
-            <li>
-              <div class="item">
-                <p>1. Chicken</p>
-                <div class="btns">
-                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
-                </div>
-              </div>    
-            </li> 
-            <li>
-              <div class="item">
-                <p>2. Fish</p>
-                <div class="btns">
-                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
-                </div>
-              </div>    
-            </li> 
-            <li>
-              <div class="item">
-                <p>3. Eggs</p>
-                <div class="btns">
-                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
-                </div>
-              </div>    
-            </li> 
-            <li>
-              <div class="item">
-                <p>4. Flour</p>
-                <div class="btns">
-                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
-                </div>
-              </div>    
-            </li> 
-            <li>
-              <div class="item">
-                <p>5. Sugar</p>
-                <div class="btns">
-                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
-                </div>
-              </div>    
-            </li> 
-            <li>
-              <div class="item">
-                <p>6. Oil</p>
-                <div class="btns">
-                  <button><i class="fas fa-minus"></i></button><button><i class="fas fa-crown"></i>
-                </div>
-              </div>    
-            </li> 
-          </ul>
+          <ul class="items"></ul>
         </div>
         <div class="add">
           <input type="text" placeholder="Add your ingriedient...">
-          <button type="button"><i class="fas fa-plus"></i></button>
+          <div class="autocomplete"></div>
+          <button id="addIngriedient" type="button"><i class="fas fa-plus"></i></button>
         </div>
         <i id="st" class="fas fa-egg"></i>
         <i id="nd" class="fas fa-fish"></i>
@@ -138,6 +89,8 @@
 
     <a id="up" href="#home"><i class="fas fa-arrow-circle-up"></i></a>
 
-    <script src="app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="ingriedientMeal.js"></script>
+    <script src="randomMeal.js"></script>
   </body>
 </html>
