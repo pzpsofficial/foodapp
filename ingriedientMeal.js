@@ -17,7 +17,8 @@ const addBtn = document.querySelector("#addIngriedient");
 const autoComplete = document.querySelector(".autocomplete");
 const root = document.querySelector(".add");
 const fridgeMealSearch = document.querySelector("#fridgeMealSearch");
-const footer = document.querySelector("footer");
+const mealSearch = document.querySelector("#mealSearch");
+const main = document.querySelector("main");
 
 const showMatchingMeals = () => {
   let matchingIngredients;
@@ -144,11 +145,25 @@ const getMeal = () => {
     });
 };
 
+const getRandomMeal = async () => {
+  const meal = await axios.get(
+    "https://www.themealdb.com/api/json/v1/1/random.php"
+  );
+  showMealToTheUser(meal);
+};
+
 const showMealToTheUser = (meal) => {
+  if (document.querySelector(".meal")) {
+    document.querySelector(".meal").remove();
+  }
   const mealData = meal.data.meals[0];
   const mealSection = document.createElement("section");
+  mealSection.classList.add("meal");
   const createTable = () => {
     const table = document.createElement("table");
+    const caption = document.createElement("caption");
+    caption.innerText = "Ingriedients";
+    table.prepend(caption);
     for (let i = 1; i < 20; i++) {
       if (mealData[`strIngredient${i}`]) {
         const row = document.createElement("tr");
@@ -168,14 +183,16 @@ const showMealToTheUser = (meal) => {
 
   mealSection.innerHTML = `
     <h2>${mealData.strMeal}</h2>
-    <img alt="Meal photo" src="${mealData.strMealThumb}">
+    <div class="mealImg">
+      <img alt="Meal photo" src="${mealData.strMealThumb}">
+    </div>
     <div class="howTo">
       <h3>Receipt</h3>
       <p>${mealData.strInstructions}</p>
     </div>   
   `;
   mealSection.append(ingredientsRow);
-  footer.insertAdjacentElement("beforebegin", mealSection);
+  main.insertAdjacentElement("beforeend", mealSection);
 };
 
 fridgeMealSearch.addEventListener("click", () => {
@@ -184,4 +201,8 @@ fridgeMealSearch.addEventListener("click", () => {
   } else {
     alert("Nie ma tak dobrze :/");
   }
+});
+
+mealSearch.addEventListener("click", () => {
+  getRandomMeal();
 });

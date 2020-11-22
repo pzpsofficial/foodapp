@@ -481,6 +481,112 @@ body .fridge #rd {
   color: rgba(206, 40, 42, 0.7);
 }
 
+body .meal {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 0 4rem 0;
+  -ms-grid-columns: 5% 1.6fr 2fr 5%;
+      grid-template-columns: 5% 1.6fr 2fr 5%;
+  -ms-grid-rows: auto 0.5fr 0.5fr;
+      grid-template-rows: auto 0.5fr 0.5fr;
+      grid-template-areas: "heading heading heading heading" ". img how ." ". img table .";
+}
+
+body .meal h2 {
+  padding: 1rem 0;
+  margin: 0 0 2rem 0;
+  background-color: #545454;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: heading;
+  font-size: 4rem;
+  color: #eceae1;
+  font-family: "Pacifico", cursive;
+}
+
+body .meal .mealImg {
+  width: 90%;
+  margin: auto;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: img;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .meal .mealImg img {
+  width: 100%;
+}
+
+body .meal .howTo {
+  width: 80%;
+  margin: auto;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: how;
+  font-family: "Roboto", sans-serif;
+}
+
+body .meal .howTo h3 {
+  color: #ce282a;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+body .meal .howTo p {
+  color: #545454;
+  font-size: 1.3rem;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+body .meal table {
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: table;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  border-collapse: collapse;
+}
+
+body .meal table caption {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #ce282a;
+  font-weight: 700;
+  text-align: left;
+}
+
+body .meal table tr:nth-child(odd) {
+  background-color: #989898;
+}
+
+body .meal table tr:nth-child(even) {
+  background-color: #656565;
+}
+
+body .meal table td {
+  padding: 0.3rem;
+  border: 2px solid #545454;
+}
+
 body footer {
   text-align: center;
   padding: 1rem 0;
@@ -496,5 +602,30 @@ body #up {
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+
+body .warn {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #eceae1;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  z-index: 20;
+  padding: 2rem 5rem;
+  border-radius: 10px;
+  display: none;
+}
+
+body .warnRed {
+  background-color: rgba(206, 40, 42, 0.7);
+  border: 3px solid #ce282a;
+}
+
+body .warnGreen {
+  background-color: rgba(35, 137, 49, 0.7);
+  border: 3px solid #238931;
 }
 /*# sourceMappingURL=main.css.map */
