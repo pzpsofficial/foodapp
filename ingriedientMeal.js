@@ -19,6 +19,7 @@ const root = document.querySelector(".add");
 const fridgeMealSearch = document.querySelector("#fridgeMealSearch");
 const mealSearch = document.querySelector("#mealSearch");
 const main = document.querySelector("main");
+const warn = document.querySelector(".warn");
 
 const showMatchingMeals = () => {
   let matchingIngredients;
@@ -198,11 +199,26 @@ const showMealToTheUser = (meal) => {
 fridgeMealSearch.addEventListener("click", () => {
   if (document.querySelector(".favouriteActive")) {
     getMeal();
+    warnFunc("warnGreen", "Scroll down! Your meal is waiting!");
   } else {
-    alert("Nie ma tak dobrze :/");
+    warnFunc(
+      "warnRed",
+      "We couldn't find favourite ingriedient in your fridge!"
+    );
   }
 });
 
 mealSearch.addEventListener("click", () => {
   getRandomMeal();
+  warnFunc("warnGreen", "Scroll down! Your meal is waiting!");
 });
+
+// handle warn
+
+const warnFunc = (clas, text) => {
+  warn.innerText = text;
+  warn.classList.add(clas);
+  setTimeout(() => {
+    warn.classList.remove(clas);
+  }, 3000);
+};

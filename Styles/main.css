@@ -617,15 +617,18 @@ body .warn {
   padding: 2rem 5rem;
   border-radius: 10px;
   display: none;
+  text-align: center;
 }
 
 body .warnRed {
   background-color: rgba(206, 40, 42, 0.7);
   border: 3px solid #ce282a;
+  display: block;
 }
 
 body .warnGreen {
   background-color: rgba(35, 137, 49, 0.7);
   border: 3px solid #238931;
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

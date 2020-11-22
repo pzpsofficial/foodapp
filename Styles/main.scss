@@ -458,15 +458,18 @@ body {
     padding: 2rem 5rem;
     border-radius: 10px;
     display: none;
+    text-align: center;
   }
 
   .warnRed {
     background-color: rgba($color: $redish, $alpha: 0.7);
     border: 3px solid $redish;
+    display: block;
   }
 
   .warnGreen {
     background-color: rgba($color: $greenish, $alpha: 0.7);
     border: 3px solid $greenish;
+    display: block;
   }
 }
